@@ -1,0 +1,70 @@
+#page-home {
+  position: relative;
+  min-height: max(820px, 100svh);
+  overflow: clip;
+}
+#page-home .hero-illustration {
+  position: absolute;
+  left: calc(50% - 158px);
+  top: 160px;
+  width: 878px;
+  height: 660px;
+  object-fit: contain;
+  pointer-events: none;
+}
+#page-home .content {
+  position: relative;
+  width: calc(100% - 48px);
+  max-width: 1120px;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+#page-home header img { display: block; object-fit: contain; }
+#page-home main { width: 560px; max-width: 100%; margin-top: 164px; padding-bottom: 64px; }
+#page-home h1 { font-size: 54px; line-height: 1.18; }
+#page-home p { font-size: 24px; margin-top: 24px; line-height: 1.6; }
+#page-home main a {
+  width: 360px;
+  max-width: 100%;
+  min-height: 72px;
+  margin-top: 40px;
+  background: var(--primary-color);
+  border-radius: 8px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  transition: background-color 0.2s;
+}
+#page-home main a > span {
+  background: #0000000a;
+  width: 72px;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+#page-home main a svg { color: #fff; width: 24px; height: 24px; }
+#page-home main a strong { flex: 1; padding: 12px; text-align: center; color: #fff; }
+#page-home main a:hover { background: #00c970; }
+@media (max-width: 1100px) and (min-width: 901px) {
+  #page-home .hero-illustration { left: 48%; top: 200px; width: 700px; height: auto; }
+  #page-home main { width: 50%; }
+  #page-home h1 { font-size: 44px; }
+  #page-home p { font-size: 20px; }
+  .desktop-break { display: none; }
+}
+@media (max-width: 900px) {
+  #page-home { min-height: 100svh; }
+  #page-home .hero-illustration { display: none; }
+  #page-home .content { min-height: 100svh; display: flex; flex-direction: column; align-items: center; text-align: center; }
+  #page-home main { margin-top: 0; padding: 64px 0; flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+  #page-home h1 { font-size: 42px; }
+  .desktop-break { display: none; }
+}
+@media (max-width: 400px) {
+  #page-home .content { width: calc(100% - 40px); }
+  #page-home h1 { font-size: 36px; }
+  #page-home p { font-size: 20px; line-height: 1.6; }
+}
